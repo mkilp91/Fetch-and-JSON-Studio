@@ -1,11 +1,15 @@
 // TODO: add code here
 window.addEventListener('load', function() {
     const container = document.getElementById('container');
-    let sortedAstronauts = [];
+    // let sortedAstronauts = [];
     // console.log(sortedAstronauts);
     fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(function(response){
         response.json().then(function(data){
-                console.log(data);
+            console.log(data);
+
+            data.sort(function(a, b){
+            return a.hoursInSpace < b.hoursInSpace ? 1 : -1;
+            })
                 for (let i=0; i<data.length; i++) {
                     container.innerHTML+=(`
                     <div class="astronaut">
@@ -13,7 +17,7 @@ window.addEventListener('load', function() {
                     <h3>${data[i].firstName} ${data[i].lastName}</h3>
                     <ul>
                     <li>Hours in space: ${data[i].hoursInSpace}</li>
-                    <li>Active: ${data[i].active}</li>
+                    <li style="${data[i].active ? `color: green`: ""}">Active: ${data[i].active}</li>
                     <li>Skills: ${data[i].skills.join(", ")}</li>
                     </ul>
                     </div>
