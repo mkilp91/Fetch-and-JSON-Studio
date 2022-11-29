@@ -30,32 +30,4 @@ window.addEventListener('load', function() {
                 )};
         });
     });
-            // console.log(json);
-            // console.log(sortedAstronauts);
-            // for (i=0; i<json.length; i++){
-                // console.log(json[i]);
-                
-                
-                // if (i===0) {
-                //     sortedAstronauts.push(json[0])
-                    // console.log(json[i+1].hoursInSpace);
-                    // console.log(sortedAstronauts);
-                // } 
-                // else if (i>0){
-                //     console.log(`i is ${i}`);
-                    // console.log(json[i].hoursInSpace);
-                    // console.log(sortedAstronauts);
-                    // console.log(sortedAstronauts[i-1]);
-                    // sortedAstronauts.push(json[i]);
-                    // if (json[i].hoursInSpace < sortedAstronauts[i-1].hoursInSpace) {
-                    //     // sortedAstronauts.unshift(json[i+1]);
-                    //     console.log('less than');
-                    // } 
-                    // else if (json[i].hoursInSpace > sortedAstronauts[i-1].hoursInSpace) {
-                    //     sortedAstronauts.push(json[i+1]);
-                    // }
-            //     }
-            // }
-        // console.log(sortedAstronauts);
-
 });
